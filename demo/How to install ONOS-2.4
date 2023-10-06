@@ -1,0 +1,45 @@
+1. Install libraries:
+sudo apt install python3
+sudo apt install python3-pip python3-dev python3-setuptools
+pip3 install selenium
+
+sudo apt install git
+sudo apt install zip
+sudo apt install curl
+sudo apt install unzip
+sudo apt install python3
+sudo apt install bzip2
+sudo ln -s /usr/bin/python3 /usr/bin/python
+
+2. Install Bazel:
+- Install jdk:
+sudo apt install openjdk-11-jdk
+- Install bazel:
+
+wget https://github.com/bazelbuild/bazelisk/releases/download/v1.4.0/bazelisk-linux-amd64
+sudo chmod +x bazelisk-linux-amd64
+sudo mv bazelisk-linux-amd64 /usr/bin/bazel
+cd ~/onos
+bazel version
+
++ Clone onos-2.4:
+git clone -b onos-2.4 https://github.com/opennetworkinglab/onos.git
+cd onos
+
++ Build onos:
+bazel build onos
+bazel build --host_force_python=PY3 onos
+
++ Run onos :
+bazel run onos-local -- clean debug
+bazel run --host_force_python=PY3 onos-local -- clean debug
+
++ Use CLI: 
+bazel run --host_force_python=PY3 onos-local -- cli
+
++ Run without output results: 
+bazel run --host_force_python=PY3 onos-local -- clean debug < /dev/null
+ 
+ + Run mininet:
+sudo mn --topo tree,2,2 --switch ovs,protocols=OpenFlow14  --controller remote,ip=127.0.0.1
+

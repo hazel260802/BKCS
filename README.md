@@ -8,9 +8,9 @@ This repository is dedicated to research and experiments related to Software-Def
 
 ### 1. Relevant Research
 
-- **Notes**: All research notes can be found in the [Notes branch](link-to-notes-branch).
-- **Research Papers**: For detailed information on SDN research, please visit the [References branch](link-to-references-branch).
-- **Demos**: Explore initial mini demos for SDN using Mininet and other demos in the [Demo branch](link-to-demo-branch).
+- **Notes**: All research notes can be found in the [Notes branch](https://github.com/hazel260802/BKCS/tree/Notes).
+- **Research Papers**: For detailed information on SDN research, please visit the [References branch](https://github.com/hazel260802/BKCS/tree/Research).
+- **Demos**: Explore initial mini demos for SDN using Mininet and other demos in the [Demo branch](https://github.com/hazel260802/BKCS/tree/Demo).
 
 ### 2. Information
 

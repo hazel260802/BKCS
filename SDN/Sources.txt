@@ -1,0 +1,3 @@
+https://www.geeksforgeeks.org/software-defined-networking/
+https://www.techtarget.com/searchnetworking/definition/software-defined-networking-SDN
+https://www.cloudflare.com/en-gb/learning/network-layer/what-is-sdn/

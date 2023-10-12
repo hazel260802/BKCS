@@ -34,9 +34,12 @@ bazel build --host_force_python=PY3 onos
 bazel run onos-local -- clean debug
 bazel run --host_force_python=PY3 onos-local -- clean debug
 
-+ Use CLI: 
-bazel run --host_force_python=PY3 onos-local -- cli
-
++ Use CLI: Unzip onos in bazel-bin and save in opt/onos folder. 
+./bin/onos-service server ssh start
+ssh -o HostKeyAlgorithms=ssh-rsa -i /home/ad/.ssh/id_rsa -p 8101 karaf@localhost 
+    + Activate onos-service: 
+        karaf@root > bundle:list                                                                                                             16:00:22
+        karaf@root > bundle:start <service-id>
 + Run without output results: 
 bazel run --host_force_python=PY3 onos-local -- clean debug < /dev/null
  

@@ -1,0 +1,30 @@
+I. Virtual Box Installation
+1. Check VirtualBox Version: Ensure that you have the latest version of VirtualBox installed. You can check for updates and upgrade VirtualBox if needed:
+- sudo apt-get update
+- sudo apt-get upgrade virtualbox
+
+2. Reinstall VirtualBox and VirtualBox DKMS: Reinstalling VirtualBox and the associated DKMS (Dynamic Kernel Module Support) package can often resolve driver-related issues:
+- sudo apt-get remove virtualbox virtualbox-dkms
+- sudo apt-get autoremove
+- sudo apt-get install virtualbox virtualbox-dkms
+3. Secure Boot: If your system has EFI Secure Boot enabled, it may prevent unsigned kernel modules (like VirtualBox's) from loading. To resolve this, you can disable Secure Boot in your system's UEFI/BIOS settings.
+4. Check Kernel Modules: Run the following command to list loaded kernel modules and check if the vboxdrv module is present:
+- lsmod | grep vboxdrv
+If it's listed, the module is loaded. If it's not listed, try loading it manually:
+- sudo modprobe vboxdrv
+ II. Virtual Box Initialization
+ 1. Download a Bootable ISO Image:
+First, you'll need a bootable ISO image of the operating system you want to install. You can download such images from official sources or trusted sources online. Ubuntu: You can download Ubuntu ISO images from the official Ubuntu website. Here's the link: https://ubuntu.com/download
+2. Attach the ISO Image:
+Open VirtualBox Manager.
+- Select your virtual machine in the left sidebar.
+- Click on the "Settings" button.
+- In the settings window, go to the "Storage" section.
+- Under the "Controller: IDE" or "Controller: SATA" (or similar) section, you should see an empty CD/DVD drive.
+- To the right of the CD/DVD drive, you'll see a small CD icon. Click on it to open a dropdown menu.
+- Choose "Choose/Create a Disk Image" and select the bootable ISO file you downloaded in Step 1.
+- Click "OK" to save the settings.
+
+ 3. Start the Virtual Machine:
+- With the bootable ISO image attached, start the virtual machine.
+- It should now attempt to boot from the attached ISO image and initiate the installation or boot process of the operating system.
